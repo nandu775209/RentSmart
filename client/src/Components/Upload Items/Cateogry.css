@@ -1,0 +1,104 @@
+/* ======= Background Styling ======= */
+body {
+    background: url('top-view-finance-business-elements_23-2148793757.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= Centered Form Container ======= */
+.FillDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ======= Form Box ======= */
+.FillDetails {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+/* ======= Inputs and Textarea ======= */
+.FillDetails input,
+.FillDetails textarea {
+    /* width: 100%; */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.FillDetails input:focus,
+.FillDetails textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+}
+
+/* ======= File Upload Input ======= */
+.FillDetails input[type="file"] {
+    border: none;
+    background: white;
+    padding: 10px;
+}
+
+/* ======= Image Preview - Horizontal Row ======= */
+.imagePreviewContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 100%;
+    justify-content: flex-start;
+}
+
+/* Scrollbar Customization */
+.imagePreviewContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.imagePreviewContainer::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+.imagePreviewContainer::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* ======= Preview Images Styling ======= */
+.imagePreviewContainer img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagePreviewContainer img:hover {
+    transform: scale(1.1);
+}
+
+

@@ -1,0 +1,118 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/chair.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chair Page</title>
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./linkdinchair_files/normalize.min.css">
+    <link rel="stylesheet" href="./linkdinchair_files/unicons.css">
+    <link rel="stylesheet" href="./linkdinchair_files/chair.css">
+  </head>
+
+  <body>
+    <div class="section-fluid-main">
+      <div class="section">
+        <div class="info-wrap mob-margin">
+          <p class="title-up">Modern chair</p>
+          <h2>Telford chair</h2>
+          <h4>$254 <span>$530</span></h4>
+          <div class="section-fluid">
+            <input class="desc-btn" type="radio" id="desc-1" name="desc-btn" checked="">
+            <label for="desc-1">Description</label>
+            <input class="desc-btn" type="radio" id="desc-2" name="desc-btn">
+            <label for="desc-2">Details</label>
+            <div class="section-fluid desc-sec accor-1">
+              <p>
+              " solid wooden living room chair ensuring  utmost comfort for extented sitting
+                "
+              </p>
+            </div>
+            <div class="section-fluid desc-sec accor-2">
+              <div class="section-inline">
+                <p><span>80</span>cm<br>Length</p>
+              </div>
+              <div class="section-inline">
+                <p><span>65</span>cm<br>Width</p>
+              </div>
+              <div class="section-inline">
+                <p><span>90</span>cm<br>Height</p>
+              </div>
+              <div class="section-inline">
+                <p><span>17.6</span>lbs<br>Weight</p>
+              </div>
+            </div>
+          </div>
+          <h5>Choose Color</h5>
+        </div>
+        <input class="color-btn for-color-1" type="radio" id="color-1" name="color-btn" checked="">
+        <label class="first-color" for="color-1"></label>
+        <input class="color-btn for-color-2" type="radio" id="color-2" name="color-btn">
+        <label class="color-2" for="color-2"></label>
+        <input class="color-btn for-color-3" type="radio" id="color-3" name="color-btn">
+        <label class="color-3" for="color-3"></label>
+        <input class="color-btn for-color-4" type="radio" id="color-4" name="color-btn">
+        <label class="color-4" for="color-4"></label>
+        <input class="color-btn for-color-5" type="radio" id="color-5" name="color-btn">
+        <label class="color-5" for="color-5"></label>
+        <input class="color-btn for-color-6" type="radio" id="color-6" name="color-btn">
+        <label class="color-6" for="color-6"></label>
+        <div class="info-wrap">
+          <a href="http://127.0.0.1:5500/chair.html#" class="btn"><i class="uil uil-shopping-cart icon"></i> Add To Cart</a>
+        </div>
+        <div class="img-wrap chair-1"></div>
+        <div class="img-wrap chair-2"></div>
+        <div class="img-wrap chair-3"></div>
+        <div class="img-wrap chair-4"></div>
+        <div class="img-wrap chair-5"></div>
+        <div class="img-wrap chair-6"></div>
+        <div class="back-color"></div>
+        <div class="back-color chair-2"></div>
+        <div class="back-color chair-3"></div>
+        <div class="back-color chair-4"></div>
+        <div class="back-color chair-5"></div>
+        <div class="back-color chair-6"></div>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div id="5E326D6E_FCEA_F90C_209C_4E687237B522"></div><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>

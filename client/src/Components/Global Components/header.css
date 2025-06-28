@@ -1,0 +1,58 @@
+/* ========== Header Section ========== */
+.header-container {
+    width: 100%;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header-section p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* User Welcome Section */
+.header-login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-login span {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.header-login button {
+    padding: 8px 15px;
+    background: white;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-login button:hover {
+    background: #0056b3;
+    color: white;
+}

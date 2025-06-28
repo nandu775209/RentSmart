@@ -1,0 +1,96 @@
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .popupContent {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: slideUp 0.3s ease;
+  }
+  
+  .popupContent input {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .popupButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .confirmBtn,
+  .cancelBtn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .confirmBtn {
+    background: linear-gradient(to right, #28a745, #3cd070);
+    color: white;
+  }
+  
+  .confirmBtn:hover {
+    background: linear-gradient(to right, #218838, #34c759);
+  }
+  
+  .cancelBtn {
+    background: linear-gradient(to right, #e74c3c, #ff6f61);
+    color: white;
+  }
+  
+  .cancelBtn:hover {
+    background: linear-gradient(to right, #c0392b, #ff4f4f);
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .calendarInputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 15px 0;
+  }
+  
+  .calendarInputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .calendarInputs input[type="date"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+    

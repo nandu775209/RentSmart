@@ -1,0 +1,133 @@
+/* ========== Login Page Styles ========== */
+
+/* Login Container with Background Image */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: url('top-view-finance-business-elements_23-2148793757.jpg') no-repeat center center/cover;
+}
+
+/* Background Overlay for Opacity Effect */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background: rgba(255, 255, 255, 0.5); /* Soft grey overlay */
+    z-index: 1;
+}
+
+/* Login Section */
+.login-section {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    z-index: 2;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Shadow Effect on Hover */
+.login-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated Heading */
+.User-login-heading {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input Hover and Focus Effects */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect for Button */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Click Effect for Button */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Signup Redirect Section */
+.Signup-on-login {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Link Styling */
+.Signup-on-login span {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Signup-on-login span:hover {
+    text-decoration: underline;
+}

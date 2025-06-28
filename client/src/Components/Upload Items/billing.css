@@ -1,0 +1,89 @@
+/* Billing.css */
+
+.BillingContainer {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #f8f9fa, #e0eafc);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .PageOverview {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .BillingInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .Billing, .SellerInfo, .paymentProceed {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  }
+  
+  .Billing h2,
+  .SellerInfo h2,
+  .paymentProceed h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  .Billing p,
+  .SellerInfo p,
+  .paymentProceed p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  hr {
+    margin: 15px 0;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+  }
+  
+  .Price h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0077ff;
+  }
+  
+  .PaymentButton {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .PayNowBtn {
+    background-color: #0077ff;
+    color: white;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .PayNowBtn:hover {
+    background-color: #005ec2;
+    transform: scale(1.05);
+  }
+  
