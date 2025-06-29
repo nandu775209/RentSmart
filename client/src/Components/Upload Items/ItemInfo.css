@@ -372,3 +372,96 @@
 .rent-form button:hover {
   background-color: #218838;
 }
+/* ========== Responsive Styling ========== */
+@media (max-width: 1024px) {
+  .ItemCard {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .ItemImages,
+  .ItemDetails {
+    width: 100%;
+    padding: 0;
+  }
+
+  .ItemDetails {
+    padding-top: 30px;
+  }
+
+  .MainImageWrapper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .MainImage {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .ItemTitle {
+    font-size: 24px;
+  }
+
+  .ItemPrice {
+    font-size: 20px;
+  }
+
+  .ItemDescription {
+    font-size: 15px;
+  }
+
+  .ModeSwitch {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ModeSwitch button {
+    width: 100%;
+  }
+
+  .ProceedButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .ThumbnailImage {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .AnimatedTitle {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .ItemCard {
+    padding: 15px;
+  }
+
+  .ItemDescription,
+  .ItemPrice,
+  .ItemTitle {
+    text-align: center;
+  }
+
+  .ThumbnailRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .rent-form h3 {
+    font-size: 20px;
+  }
+
+  .rent-form label,
+  .rent-form input,
+  .rent-form button {
+    font-size: 16px;
+  }
+}
