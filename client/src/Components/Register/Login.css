@@ -131,3 +131,62 @@ button:active {
 .Signup-on-login span:hover {
     text-decoration: underline;
 }
+
+/* ===== Responsive Styles Only ===== */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .login-section {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.5rem;
+    margin-top: 60px;
+  }
+
+  .User-login-heading {
+    font-size: 1.5rem;
+  }
+
+  input {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .Signup-on-login {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-section {
+    max-width: 100%;
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .User-login-heading {
+    font-size: 1.3rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .Signup-on-login {
+    text-align: center;
+  }
+}
