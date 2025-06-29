@@ -93,4 +93,61 @@
     border: 1px solid #ccc;
     border-radius: 6px;
   }
-    
+
+
+/* ===== Responsive Popup Styling ===== */
+@media (max-width: 600px) {
+  .popupContent {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .popupContent input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .calendarInputs {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .calendarInputs input[type="date"] {
+    width: 100%;
+  }
+
+  .popupButtons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .confirmBtn,
+  .cancelBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .popupContent {
+    padding: 16px;
+  }
+
+  .popupContent input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .calendarInputs label {
+    font-size: 14px;
+  }
+
+  .confirmBtn,
+  .cancelBtn {
+    font-size: 14px;
+  }
+}
+
+
+
