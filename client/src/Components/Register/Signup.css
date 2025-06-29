@@ -156,3 +156,64 @@ button:active {
 .login-on-signup span a:hover {
     text-decoration: underline;
 }
+
+/* ===== Responsive Styles Only ===== */
+@media (max-width: 768px) {
+  .Signup-Container {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .Signup-section {
+    width: 100%;
+    max-width: 340px;
+    padding: 25px;
+    margin-top: 60px;
+  }
+
+  .signup-heading {
+    font-size: 22px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .login-on-signup {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Signup-section {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .signup-heading {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .login-on-signup {
+    font-size: 12.5px;
+  }
+}
+
