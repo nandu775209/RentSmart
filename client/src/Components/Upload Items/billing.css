@@ -86,4 +86,70 @@
     background-color: #005ec2;
     transform: scale(1.05);
   }
-  
+  /* ===== Responsive Styles Only ===== */
+@media (max-width: 768px) {
+  .BillingContainer {
+    padding: 30px 15px;
+    align-items: center;
+  }
+
+  .PageOverview {
+    padding: 25px;
+  }
+
+  .Billing h2,
+  .SellerInfo h2,
+  .paymentProceed h2 {
+    font-size: 20px;
+  }
+
+  .Billing p,
+  .SellerInfo p,
+  .paymentProceed p {
+    font-size: 15px;
+  }
+
+  .Price h2 {
+    font-size: 22px;
+  }
+
+  .PayNowBtn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .PageOverview {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .Billing,
+  .SellerInfo,
+  .paymentProceed {
+    padding: 20px;
+  }
+
+  .Billing h2,
+  .SellerInfo h2,
+  .paymentProceed h2 {
+    font-size: 18px;
+  }
+
+  .Billing p,
+  .SellerInfo p,
+  .paymentProceed p {
+    font-size: 14px;
+  }
+
+  .Price h2 {
+    font-size: 20px;
+  }
+
+  .PayNowBtn {
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+}
