@@ -101,4 +101,49 @@ body {
     transform: scale(1.1);
 }
 
+/* ===== Responsive Styles Only ===== */
+@media (max-width: 768px) {
+  .FillDetailsContainer {
+    padding: 15px;
+  }
 
+  .FillDetails {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .FillDetails input,
+  .FillDetails textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .imagePreviewContainer img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .FillDetails {
+    padding: 16px;
+    border-radius: 8px;
+    gap: 12px;
+  }
+
+  .FillDetails input,
+  .FillDetails textarea {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .imagePreviewContainer {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .imagePreviewContainer img {
+    width: 80px;
+    height: 80px;
+  }
+}
