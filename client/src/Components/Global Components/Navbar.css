@@ -14,7 +14,16 @@
     z-index: 1000;
     box-sizing: border-box; /* Prevent overflow */
 }
-
+.uplaod-button1 {
+    background: #007bff;
+    color: red;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */}
 /* Navbar Container */
 .navbar-container {
     width: 100%;
@@ -165,6 +174,11 @@ body {
     text-align: center;
     margin-top: 10px;
   }
+
+    .uplaod-button{
+      border-radius: 5px;
+    font-size: 0.75rem;
+}
 }
 
 @media (max-width: 480px) {
@@ -185,5 +199,9 @@ body {
   .mic-button {
     font-size: 16px;
   }
+}
+.uplaod-button{
+      border-radius: 4px;
+    font-size: 0.6rem;
 }
   
