@@ -1,67 +1,22 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./Navbar.css";
 
-
-// function Navbar() {
-//     const isLoggedIn = false; // Change this based on authentication state
-//     const username = "John Doe"; // Replace with actual user data when implementing authentication
-   
-//     const user = localStorage.getItem("User");
-//     // const handleSubmit = () => {
-//     //     if (!user) {
-//     //       navigate("/user/login");
-//     //     } else {
-//     //       navigate("/user/upload/cateogry");
-//     //     }
-//     //   };
-
-//     return (
-//         <nav className="navbar">
-//             <div className="navbar-container">
-//                 {/* Logo (Left Side) */}
-//                 <Link to="/" className="navbar-logo">Rent<span>Smart</span></Link>
-
-//                 {/* Navigation Links (Right Side) */}
-//                 <ul className="nav-links">
-//                 <li>
-//       <Link 
-//         to={user ? "/user/upload/cateogry" : "/user/login"} 
-//         className="upload-button"
-//       >
-//         Upload Item
-//       </Link>
-//                     </li>
-              
-//                     <li><Link to="/about">About Us</Link></li>
-//                     <li className="nav-user">Welcome, {isLoggedIn ? username : "Guest"}</li>
-//                     <li>
-//                         {isLoggedIn ? (
-//                             <Link to="/logout" className="nav-logout">Logout</Link>
-//                         ) : (
-//                             <Link to="/user/login" className="nav-login">Login</Link>
-//                         )}
-//                     </li>
-//                 </ul>
-//             </div>
-//         </nav>
-//     );
-// }
-
-// export default Navbar;
-
-
-// new code
-
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState , useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { toast } from "react-toastify";
 
 function Navbar({ onSearch }) {
-    const isLoggedIn = false; 
-    const username = "John Doe"; 
+  
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("User");
+    setIsLoggedIn(!!token);
+  }, []);
+
+    // const username = "John Doe"; 
     const user = localStorage.getItem("User");
     const [searchInput, setSearchInput] = useState("");
+    const navigate = useNavigate();
 
     const handleVoiceSearch = () => {
         const recognition = new window.webkitSpeechRecognition(); // Chrome specific
@@ -73,6 +28,30 @@ function Navbar({ onSearch }) {
             setSearchInput(transcript);
             if (onSearch) onSearch(transcript);
         };
+    };
+
+
+    const handleSubmit = () => {
+        if (!user) {
+            toast.error("Please login to upload an item");
+
+            navigate("/user/login");
+
+
+
+        } else {
+            navigate("/user/upload/cateogry");
+        }
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem("User");
+         setIsLoggedIn(false);
+        navigate("/user/login");
+    };
+
+    const handleLoginRedirect = () => {
+        navigate("/user/login");
     };
 
     const handleInputChange = (e) => {
@@ -100,20 +79,35 @@ function Navbar({ onSearch }) {
 
                 <ul className="nav-links">
                     <li>
-                        <Link 
+                        {/* <Link 
                             to={user ? "/user/upload/cateogry" : "/user/login"} 
                             className="upload-button"
                         >
                             Upload Item
-                        </Link>
+                        </Link> */}
+                        <button onClick={handleSubmit} className="upload-button1">
+                            Upload Item
+                        </button>
                     </li>
                     <li><Link to="/about">About Us</Link></li>
-                    <li className="nav-user">Welcome, {isLoggedIn ? username : "Guest"}</li>
-                    <li>
+                    <li className="nav-user">Welcome, {isLoggedIn ? user.slice(1,-1) : "Guest"}</li>
+                    {/* <li>
                         {isLoggedIn ? (
-                            <Link to="/logout" className="nav-logout">Logout</Link>
+                            <Link to="/user/login" className="nav-logout">Logout</Link>
                         ) : (
                             <Link to="/user/login" className="nav-login">Login</Link>
+                        )}
+                    </li> */}
+
+                    <li>
+                        {isLoggedIn ? (
+                            <button onClick={handleLogout} className="nav-btn logout-btn">
+                                Logout
+                            </button>
+                        ) : (
+                            <button onClick={handleLoginRedirect} className="nav-btn login-btn">
+                                Login
+                            </button>
                         )}
                     </li>
                 </ul>
