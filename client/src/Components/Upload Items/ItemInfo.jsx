@@ -36,7 +36,9 @@ function ItemDescription() {
   const handleModeSwitch = (selectedMode) => {
     if (selectedMode === "rent") {
       setShowPopup(true);
-    } else {
+    } else { 
+      if(mode === "buy") {alert("Already in the Buy mode");}
+      else
       setMode("buy");
       setPrice(product.price);
     }
