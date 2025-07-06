@@ -5,6 +5,8 @@ import Header from "../Global Components/header";
 import Navbar from "../Global Components/Navbar";
 import "./Dashboard.css";
 
+import { toast } from 'react-toastify';
+
 // 🖼️ Image Rotator Component
 function ImageCarousel({ images = [], alt }) {
   const [index, setIndex] = useState(0);
@@ -26,78 +28,6 @@ function ImageCarousel({ images = [], alt }) {
   );
 }
 
-// function Dashboard() {
-//   const [items, setItems] = useState([]);
-//   const navigate = useNavigate();
-//   const user = localStorage.getItem("User");
-
-//   const handleSubmit = () => {
-//     if (!user) {
-//       navigate("/user/login");
-//     } else {
-//       navigate("/user/upload/cateogry");
-//     }
-//   };
-
-//   useEffect(() => {
-//     const fetchItems = async () => {
-//       try {
-//         const response = await axios.get("http://localhost:8080/api/fetch");
-//         setItems(response.data);
-//       } catch (error) {
-//         console.error("Error fetching items:", error);
-//       }
-//     };
-//     fetchItems();
-//   }, []);
-
-//   return (
-//     <div className="Dashboard-container">
-//       <Navbar />
-//       <Header />
-//       <div className="Dashboard-items">
-//         <div className="Upload-item-list">
-//           {items.length > 0 ? (
-//             items.map((product) => (
-//               <Link
-//                 to={`/item/${product.product_id}`}
-//                 key={product.product_id}
-//                 className="item-card"
-//               >
-//                 <h2 className="product-title">{product.productName}</h2>
-
-//                 <div className="image-container">
-//                   <ImageCarousel images={product.images} alt={product.productName} />
-//                 </div>
-
-//                 <div className="product-price">₹{product.price}</div>
-
-//                 <div className="product-description">
-//                   {product.description
-//                     .split("\n")
-//                     .slice(0, 5)
-//                     .map((line, idx) => (
-//                       <div key={idx}>{line}</div>
-//                     ))}
-//                 </div>
-
-//                 {/* 👇 New View Product Button */}
-//                 <div className="view-product-button">View Product</div>
-//               </Link>
-//             ))
-//           ) : (
-//             <p className="no-items-message">No items available yet</p>
-//           )}
-//         </div>
-
-//           <button onClick={handleSubmit} className="upload-button">
-//             Upload Item
-//           </button>
-//       </div>
-//     </div>
-//   );
-// }
-
 
 function Dashboard() {
   const [items, setItems] = useState([]);
@@ -107,7 +37,12 @@ function Dashboard() {
 
   const handleSubmit = () => {
     if (!user) {
+       toast.error("Please login to upload an item");
+      
       navigate("/user/login");
+    
+     
+     
     } else {
       navigate("/user/upload/cateogry");
     }
