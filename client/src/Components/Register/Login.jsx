@@ -28,13 +28,15 @@ function LogIn() {
             );
 
             const data = await response.json();
-         
+            // console.log(data);
 
             if (response.status === 200) {
                 // Save user and navigate
                 localStorage.setItem("User", JSON.stringify(data.Email));
+                 toast.success("Login successful!");
                 navigate("/");
-                toast.success("Login successful!");
+                console.log(localStorage.getItem("User"));
+               
             } else {
                 // Show error toast
                 toast.error("Invalid email or password. Please try again or register.");
